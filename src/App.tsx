@@ -1,7 +1,10 @@
 import React from 'react';
 
-const App = (props: any) => {
-  const { message } = props;
+interface AppProps {
+  message: string;
+}
+
+const App = ({message}: AppProps) => {
   return <div>{message}</div>;
 };
 
