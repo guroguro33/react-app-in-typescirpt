@@ -4,6 +4,7 @@ import App from './App';
 
 
 ReactDOM.render(
-  <App message="Hello, React!" />,
+  // Appの初期値が入る
+  <App />,
   document.getElementById('root')
 );
