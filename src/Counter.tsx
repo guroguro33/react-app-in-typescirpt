@@ -1,14 +1,23 @@
-import React from 'react'; // reactの読み込み
+import React, {useState} from 'react'; // reactとuseStateの読み込み
 
 // React.FunctionComponentはReact.FCと省略可能
 const Counter: React.FC<{}> = () => {
-  const value = 0;
-  
+  const initialValue: any = 0;
+  const [value, setValue] = useState<number>(initialValue);
+
+  const increment = () => {
+    setValue((prevState) => prevState + 1);
+  }
+
+  const decrement = () => {
+    setValue((prevState) => prevState - 1);
+  }
+
   return (
     <div>
       <div> value: {value}</div>
-      <button>+1</button>
-      <button>-1</button>
+      <button onClick={ increment }>+1</button>
+      <button onClick={ decrement }>-1</button>
     </div>
   );
     
