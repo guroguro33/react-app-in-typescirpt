@@ -20,6 +20,7 @@ const Counter: React.FC<{}> = () => {
   useEffect(() => {
     renderTimes.current += 1;
   })
+  // nonNullアサーションオペレータで、nullじゃないことを伝える
   const ref = useRef<HTMLInputElement>(null!);
   const focusInput = () => {
     // const current = ref.current;
